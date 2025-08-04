@@ -1,12 +1,4 @@
-[dev-packages]
-torch = { index = "pytorch_cu128"}
-
-[[source]]
-url = "https://download.pytorch.org/whl/cu128"
-verify_ssl = true
-name = "pytorch_cu128"
-
 [build-system]
-requires = ["torch>=2.1.0", "numpy"]
+requires = ["torch>=2.1.0; platform_machine!='aarch64' ", "torch @ https://download.pytorch.org/whl/cu128/torch-2.7.0%2Bcu128-cp312-cp312-manylinux_2_28_aarch64.whl#sha256=6bba7dca5d9a729f1e8e9befb98055498e551efaf5ed034824c168b560afc1ac; platform_machine=='aarch64'"]
 build-backend = "setuptools.build_meta"
 
