@@ -1,7 +1,3 @@
-[build-system]
-requires = ["torch>=2.1.0", "numpy"]
-build-backend = "setuptools.build_meta"
-
 [dev-packages]
 torch = { index = "pytorch_cu128"}
 
@@ -9,3 +5,8 @@ torch = { index = "pytorch_cu128"}
 url = "https://download.pytorch.org/whl/cu128"
 verify_ssl = true
 name = "pytorch_cu128"
+
+[build-system]
+requires = ["torch>=2.1.0", "numpy"]
+build-backend = "setuptools.build_meta"
+
